@@ -14,10 +14,9 @@ c.setopt(c.URL, 'http://localhost:8181/onos/v1/flows/of:5e3e486e73020629')
 with open('rule.json') as data_file:    
     json_rule = json.load(data_file)
 
-print json_rule  
-post_data = json_rule
+print json_rule
 # Form data must be provided already urlencoded.
-postfields = urlencode(post_data)
+postfields = urlencode(json_rule)
 # Sets request method to POST,
 # Content-Type header to application/x-www-form-urlencoded
 # and data to send in request body.
