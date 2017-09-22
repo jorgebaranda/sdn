@@ -10,38 +10,11 @@ except ImportError:
 
 c = pycurl.Curl()
 c.setopt(c.URL, 'http://localhost:8181/onos/v1/flows/of:5e3e486e73020629')
-json_rule = {
-	  "priority": 400000,
-	  "timeout": 0,
-	  "isPermanent": True,
-	  "deviceId": "of:5e3e486e73020629",
-	  "treatment": {
-	    "instructions": [
-	      {
-	        "type": "OUTPUT",
-	        "port": "CONTROLLER"
-	      }
-	    ]
-	  },
-	  "selector": {
-	    "criteria": [
-	      {
-	        "type": "ETH_TYPE",
-	        "ethType": "0x88cc"
-	      },
-	      {
-	        "type": "ETH_DST",
-	        "mac": "00:00:11:00:00:01"
-	      },
-	      {
-	        "type": "ETH_SRC",
-	        "mac": "00:00:11:00:00:01"
-	      }
-	    ]
-	  }
-	}
-#post_data = {'field': 'value'}
-#post_data = json.loads(json_rule)
+
+with open('rule.json') as data_file:    
+    json_rule = json.load(data_file)
+
+print json_rule  
 post_data = json_rule
 # Form data must be provided already urlencoded.
 postfields = urlencode(post_data)
