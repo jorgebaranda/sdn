@@ -1,35 +1,31 @@
+
 {
-	"id":"281475011727534",
-	"tableId":0,
-	"appId":"org.onosproject.core",
-	"groupId":0,
-	"priority":5,
-	"timeout":0,
-	"isPermanent":true,
-	"deviceId":"of:5e3e486e73020629",
-	"state":"ADDED",
-	"life":86757,
-	"packets":-1,
-	"bytes":128,
-	"liveType":"UNKNOWN",
-	"lastSeen":1506101057909,
-	"treatment":{
-	"instructions":[
-		{
-			"type":"OUTPUT",
-			"port":"CONTROLLER"
-		}
-		],
-		"clearDeferred":true,
-		"deferred":[
-		]
-	},
-	"selector":{
-		"criteria":[
-			{
-			"type":"ETH_TYPE",
-			"ethType":"0x806"
-			}
-		]
-	}
+  "priority": 400000,
+  "timeout": 0,
+  "isPermanent": true,
+  "deviceId": "of:5e3e486e73020629",
+  "treatment": {
+    "instructions": [
+      {
+        "type": "OUTPUT",
+        "port": "CONTROLLER"
+      }
+    ]
+  },
+  "selector": {
+    "criteria": [
+      {
+        "type": "ETH_TYPE",
+        "ethType": "0x88cc"
+      },
+      {
+        "type": "ETH_DST",
+        "mac": "00:00:11:00:00:01"
+      },
+      {
+        "type": "ETH_SRC",
+        "mac": "00:00:11:00:00:01"
+      }
+    ]
+  }
 }
