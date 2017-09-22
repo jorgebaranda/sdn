@@ -9,12 +9,12 @@ except ImportError:
     from urllib import urlencode
 
 c = pycurl.Curl()
-c.setopt(c.URL, 'http://localhost:8181/onos/v1/docs/flows/{deviceId}')
+c.setopt(c.URL, 'http://localhost:8181/onos/v1/flows/of:5e3e486e73020629')
 json_rule = {
 	  "priority": 400000,
 	  "timeout": 0,
 	  "isPermanent": True,
-	  "deviceId": "of:0000000000000001",
+	  "deviceId": "of:5e3e486e73020629",
 	  "treatment": {
 	    "instructions": [
 	      {
@@ -49,8 +49,8 @@ postfields = urlencode(post_data)
 # Content-Type header to application/x-www-form-urlencoded
 # and data to send in request body.
 c.setopt(c.POSTFIELDS, postfields)
-#c.setopt(pycurl.PROXYUSERPWD, str("%s:%s" % (proxy["username"], proxy["password"])))
-c.setopt(pycurl.PROXYUSERPWD, "onos:rocks")
+c.setopt(pycurl.HTTPAUTH, pycurl.HTTPAUTH_BASIC)
+c.setopt(pycurl.USERPWD, "onos:rocks")
 
 c.perform()
 c.close()
