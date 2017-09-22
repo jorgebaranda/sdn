@@ -22,6 +22,7 @@ postfields = urlencode(post_data)
 # Content-Type header to application/x-www-form-urlencoded
 # and data to send in request body.
 c.setopt(c.POSTFIELDS, postfields)
+c.setopt(pycurl.HTTPHEADER, [ 'Content-Type: application/json' , 'Accept: application/json'])
 c.setopt(pycurl.HTTPAUTH, pycurl.HTTPAUTH_BASIC)
 c.setopt(pycurl.USERPWD, "onos:rocks")
 
