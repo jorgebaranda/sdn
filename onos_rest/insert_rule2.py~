@@ -8,4 +8,5 @@ with open('rule.json') as data_file:
 headers = {'Content-Type':'application/json' , 'Accept':'application/json'}
 response = requests.post('http://localhost:8181/onos/v1/flows/of:5e3e486e73020629', data=json_rule, auth=('onos', 'rocks'), headers=headers)
 print response.status_code
+#print response.raise_for_status()
 
