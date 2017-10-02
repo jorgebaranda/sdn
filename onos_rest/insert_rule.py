@@ -1,8 +1,9 @@
 import requests
 from requests.auth import HTTPBasicAuth
 import json
+import sys
 
-with open('ruletable.json') as data_file:    
+with open(sys.argv[1]) as data_file:    
 	json_rule = json.dumps(json.load(data_file))
 
 headers = {'Content-Type':'application/json' , 'Accept':'application/json'}
