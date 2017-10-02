@@ -13,7 +13,7 @@
     "criteria": [
       {
         "type": "IN_PORT",
-        "port": "5"
+        "port": "2"
       }
     ]
   }

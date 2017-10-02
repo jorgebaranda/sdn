@@ -4,16 +4,16 @@
   "treatment": {
     "instructions": [
       {
-        "type": "OUTPUT",
-        "port": "2"
+        "type": "TABLE",
+        "tableId": 1
       }
     ]
   },
   "selector": {
     "criteria": [
       {
-        "type": "IN_PORT",
-        "port": "1"
+	"type": "IN_PORT",
+        "port": "2"
       }
     ]
   }

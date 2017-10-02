@@ -2,7 +2,7 @@ import requests
 from requests.auth import HTTPBasicAuth
 import json
 
-with open('rule.json') as data_file:    
+with open('ruletable.json') as data_file:    
 	json_rule = json.dumps(json.load(data_file))
 
 headers = {'Content-Type':'application/json' , 'Accept':'application/json'}
