@@ -1,0 +1,13 @@
+{
+  "priority": 7,
+  "tableId": 1,
+  "isPermanent": true,
+  "treatment": {
+    "instructions": [
+      {
+        "type": "TABLE",
+        "tableId": "7"
+      }
+    ]
+  }
+}
