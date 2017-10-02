@@ -1,12 +1,12 @@
 {
   "priority": 7,
-  "tableId": 1,
+  "tableId": 3,
   "isPermanent": true,
   "treatment": {
     "instructions": [
       {
         "type": "OUTPUT",
-        "port": "1"
+        "port": "4"
       }
     ]
   }
