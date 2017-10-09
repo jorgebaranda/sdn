@@ -5,8 +5,8 @@
   "treatment": {
     "instructions": [
       {
-        "type": "OUTPUT",
-        "port": "5"
+        "type": "TABLE",
+        "tableId": "5"
       }
     ]
   }
