@@ -1,0 +1,48 @@
+{
+  "priority": 7,
+  "isPermanent": true,
+  "treatment": {
+    "instructions": [
+      {
+        "type": "OUTPUT",
+        "port": "2"
+      }
+    ]
+  },
+  "selector": {
+    "criteria": [
+      {
+        "type": "IN_PORT",
+        "port": "3"
+      },
+      {
+        "type": "ETH_TYPE",
+        "ethType": "0x88cc"
+      },
+      {
+        "type": "ETH_DST",
+        "mac": "E8:DE:27:A7:DA:EA"
+      },
+      {
+        "type": "ETH_SRC",
+        "mac": "14:DA:E9:F3:98:8B"
+      },
+      {
+        "type": "IPV4_SRC",
+        "ip": "10.10.42.10/24"
+      },
+      {
+        "type": "IPV4_DST",
+        "ip": "10.10.42.50/24"
+      },
+      {
+        "type": "TCP_SRC",
+        "tcpPort": 0
+      },
+      {
+        "type": "TCP_DST",
+        "tcpPort": 0
+      }
+    ]
+  }
+}
